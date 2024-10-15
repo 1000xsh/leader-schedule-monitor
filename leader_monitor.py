@@ -226,7 +226,7 @@ def create_display(
             str(sum(1 for slot in schedule if slot["status"] == "pending")),
         )
         main_table.add_row(
-            "skipped | produced | total | pending",
+            "skipped | produced | pending | total",
             f"[bright_white]{skipped_slots} ({skipped_percentage:.2f}%) | {produced_slots - skipped_slots} | {str(sum(1 for slot in schedule if slot['status'] == 'pending'))} | {total_leader_slots}",
         )
     else:
